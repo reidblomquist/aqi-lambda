@@ -1,7 +1,7 @@
-var scraper = require('./scraper');
+const func = require('./function');
 
 exports.handler = function(event, context, callback) {
-    scraper.scrape(function(err, result) {
+    func.fetch(event, function(err, result) {
       if (err) {
         return callback(null, {error: result});
       }

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGE=craft-pour-house-lambda.zip
+PACKAGE=aqi-lambda.zip
 OUTPUT=dist
 TMP=.tmp
 

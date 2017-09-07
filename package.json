@@ -1,17 +1,16 @@
 {
-  "name": "simple-scraper",
+  "name": "aqi-lambda",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "DEBUG=express:* nodemon --watch scraper devserver.js",
+    "start": "DEBUG=express:* nodemon --watch function devserver.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.16.1",
-    "cheerio": "^0.22.0"
+    "axios": "^0.16.1"
   },
   "devDependencies": {
     "body-parser": "1.15.1 ",

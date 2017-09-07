@@ -4,5 +4,5 @@
 
 aws lambda update-function-code \
 --region us-east-1 \
---function-name doTheScrapeyThing \
+--function-name doTheAqiThing \
 --zip-file fileb://$PWD/$OUTPUT/$PACKAGE
