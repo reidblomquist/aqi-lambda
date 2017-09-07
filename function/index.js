@@ -3,7 +3,7 @@ const config = require('../config');
 
 exports.fetch = function(event, callback) {
   if (event.queryStringParameters !== null && event.queryStringParameters !== undefined) {
-    if (event.queryStringParmaeters.lat !== undefined &&
+    if (event.queryStringParameters.lat !== undefined &&
       event.queryStringParameters.lat !== null &&
       event.queryStringParameters.lng !== undefined &&
       event.queryStringParameters.lng !== null) {
@@ -12,7 +12,7 @@ exports.fetch = function(event, callback) {
 
       axios.get(url)
         .then(function (response) {
-          return callback(null, response);
+          return callback(null, JSON.stringify(response.data.data));
         })
         .catch(function (error) {
           callback(true, error);

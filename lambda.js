@@ -3,8 +3,14 @@ const func = require('./function');
 exports.handler = function(event, context, callback) {
     func.fetch(event, function(err, result) {
       if (err) {
-        return callback(null, {error: result});
+        return callback(result);
       }
-      callback(null, {result: result});
+
+      const response = {
+        statusCode: 200,
+        body: result
+      }
+
+      callback(null, response);
     })
 };
